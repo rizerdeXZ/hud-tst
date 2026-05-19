@@ -1,0 +1,95 @@
+.money-xp-display {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 12px 16px;
+  border: 1.5px solid;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+.stat-card.money {
+  background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 200, 100, 0.05));
+  border-color: rgba(0, 255, 65, 0.3);
+}
+
+.stat-card.money:hover {
+  border-color: rgba(0, 255, 65, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 255, 65, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.stat-card.xp {
+  background: linear-gradient(135deg, rgba(181, 0, 255, 0.1), rgba(255, 0, 110, 0.05));
+  border-color: rgba(181, 0, 255, 0.3);
+}
+
+.stat-card.xp:hover {
+  border-color: rgba(181, 0, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(181, 0, 255, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 20px;
+  background: rgba(10, 10, 20, 0.5);
+  border: 1px solid;
+  transition: all 0.3s ease;
+}
+
+.stat-icon.money-icon {
+  color: var(--neon-green);
+  border-color: rgba(0, 255, 65, 0.2);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 65, 0.4));
+}
+
+.stat-icon.xp-icon {
+  color: var(--neon-purple);
+  border-color: rgba(181, 0, 255, 0.2);
+  filter: drop-shadow(0 0 8px rgba(181, 0, 255, 0.4));
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 800;
+  display: block;
+}
+
+.stat-card.money .stat-value {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.stat-card.xp .stat-value {
+  color: var(--neon-purple);
+  text-shadow: 0 0 10px rgba(181, 0, 255, 0.5);
+}

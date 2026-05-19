@@ -1,0 +1,103 @@
+.notification {
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  border: 1.5px solid;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  max-width: 350px;
+  animation: slideIn 0.4s ease-out;
+}
+
+.notification-info {
+  background: linear-gradient(135deg, rgba(0, 200, 255, 0.1), rgba(0, 200, 255, 0.05));
+  border-color: rgba(0, 200, 255, 0.3);
+}
+
+.notification-success {
+  background: linear-gradient(135deg, rgba(0, 255, 65, 0.1), rgba(0, 255, 65, 0.05));
+  border-color: rgba(0, 255, 65, 0.3);
+}
+
+.notification-warning {
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.1), rgba(255, 165, 0, 0.05));
+  border-color: rgba(255, 165, 0, 0.3);
+}
+
+.notification-error {
+  background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(255, 0, 110, 0.05));
+  border-color: rgba(255, 0, 110, 0.3);
+}
+
+.notification-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.notification-icon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+.notification-icon.info {
+  color: #00c8ff;
+}
+
+.notification-icon.success {
+  color: var(--neon-green);
+}
+
+.notification-icon.warning {
+  color: #ffa500;
+}
+
+.notification-icon.error {
+  color: var(--neon-pink);
+}
+
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.notification-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.notification-text {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.notification-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 0 0 10px 10px;
+  animation: shrink 5s linear forwards;
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

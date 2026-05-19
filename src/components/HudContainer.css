@@ -1,0 +1,60 @@
+.hud-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.hud-bottom-left {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  pointer-events: auto;
+  max-width: 400px;
+}
+
+.hud-bottom-right {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  pointer-events: auto;
+  align-items: flex-end;
+}
+
+.hud-notifications {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  pointer-events: auto;
+  max-width: 400px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .hud-bottom-left {
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .hud-bottom-right {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .hud-notifications {
+    right: 15px;
+    top: 15px;
+  }
+}
